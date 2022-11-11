@@ -1,12 +1,17 @@
 import './App.css';
-import data1 from './data1.json';
-import data2 from './data2.json';
-import data3 from './data3.json';
-import data4 from './data4.json';
+import { Line } from 'react-chartjs-2';
 
 function App() {
+
+  const data1 = require('./data/data1.json');
+  const data2 = require('./data/data2.json');
+  const data3 = require('./data/data3.json');
+  const data4 = require('./data/data4.json');
   return (
     <div className="App">
+      <h1>Climate Change</h1>
+      
+      <Line data={data1} />
     </div>
   );
 }
