@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Bangers', cursive;
+  background: linear-gradient(to right, #BBC96B 0%, #3EA0FF 100%, #BEC58E 100%);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: cadetblue;
+}
+
+.modal {
+  position: absolute;
+  text-align: center;
+  width: 40%;
+  height: 15%;
+  top: 40%;
+  left: auto;
+  font-size: xxx-large;
+  background-color: crimson;
+  border-radius: 10px;
+  display: none;
+}
+
+.modal button {
+  width: 40%;
+  height: 40%;
+  cursor: pointer;
+}
