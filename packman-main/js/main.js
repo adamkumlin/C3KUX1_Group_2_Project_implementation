@@ -1,9 +1,9 @@
 'use strict'
-const WALL = '🧱';
-const FOOD = '🍕';
+const WALL = ' <img src="img/wall.png" />';
+const FOOD = ' <img src="img/plastic_bottle.png" />';
 const EMPTY = ' ';
 const SUPER_FOOD = '🍄';
-const CHERRY = '🍒';
+const CHERRY = ' <img src="img/trash.png" />';
 
 
 var gBoard;
@@ -35,10 +35,6 @@ function buildBoard() {
                 j === 0 || j === SIZE - 1 ||
                 (j === 3 && i > 4 && i < SIZE - 2)) {
                 board[i][j] = WALL;
-            }
-            if ((i === 1 && j === 1) || (i === 1 && j === SIZE - 2) ||
-                (i === SIZE - 2 && j === 1) || (i === SIZE - 2 && j === SIZE - 2)) {
-                board[i][j] = SUPER_FOOD;
             }
         }
     }

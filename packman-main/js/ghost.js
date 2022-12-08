@@ -1,16 +1,9 @@
 'use strict'
 var ghostsImg = [
-    '<img src="img/ghost_01.png" />',
-    '<img src="img/ghost_02.png" />',
-    '<img src="img/ghost_03.png" />',
-    '<img src="img/ghost_04.png" />',
-    '<img src="img/ghost_05.png" />',
-    '<img src="img/ghost_06.png" />',
-    '<img src="img/ghost_07.png" />',
-    '<img src="img/ghost_08.png" />',
-    '<img src="img/ghost_super.png" />',
+    '<img src="img/rat.png" />',
+    '<img src="img/badger.png" />',
 ]
-var gGhost = ghostsImg[getRandomInt(0, 8)];
+var gGhost = ghostsImg[getRandomInt(0, 1)];
 
 var gGhosts = [];
 var gEaten = [];

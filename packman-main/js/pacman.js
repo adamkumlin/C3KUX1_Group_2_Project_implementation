@@ -1,5 +1,5 @@
 'use strict'
-const PACMAN = '<img src="img/pacman.png" />';
+const PACMAN = '<img src="img/garbage_truck.png" />';
 
 var gPacman;
 function createPacman(board) {
