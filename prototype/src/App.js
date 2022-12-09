@@ -1,4 +1,6 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
+import { render } from 'react-dom';
+import Pacman from 'react-pacman';
 
 const data1 = require('./data/data1.json');
 const data2 = require('./data/data2.json');
@@ -24,6 +26,8 @@ function App() {
         <Line type="monotone" dataKey="Total" stroke="black" activeDot={{ r: 8 }}/>
 
       </LineChart>
+
+      <Pacman />
   </div>
   );
 }
