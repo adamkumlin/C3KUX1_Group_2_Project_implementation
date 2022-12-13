@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+/* Colours */
+:root {
+  --red: #cb8c8c;
+  --orange: #cba08c;
+  --yellow: #d8c196;
+  --cyan: #b1d4da;
+  --blue: #a1bdcd;
+  --grey: #7f8e97;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* * * * */
+
+/* BG Colours */
+
+.bg--red {
+  background-color: var(--red);
+}
+.bg--orange {
+  background-color: var(--orange);
+}
+.bg--yellow {
+  background-color: var(--yellow);
+}
+.bg--cyan {
+  background-color: var(--cyan);
+}
+.bg--blue {
+  background-color: var(--blue);
+}
+.bg--grey {
+  background-color: var(--grey);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card--custom {
+  height: 7rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+/* .challengeMain {
+  width: 100vw;
+  height: 90vh; */
+/* background-color: rgba(240, 211, 211, 0.488); */
+/* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+} */
+.challengeMain--Subject {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 30%;
+  height: 80px;
+  background-color: red;
+  margin: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.overviewContainer {
+  background-color: #d3d6d7;
+  height: 94vh;
+  padding-top: 5vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.challengeContainer {
+  background-color: #d3d7d3;
+  height: 94vh;
+  padding-top: 5vh;
+}
+
+body {
+  background-color: #d3d7d3;
 }
