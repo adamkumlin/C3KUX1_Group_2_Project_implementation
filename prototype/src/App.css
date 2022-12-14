@@ -70,3 +70,88 @@
 body {
   background-color: #d3d7d3;
 }
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+.App {
+  text-align: center;
+}
+
+  .Title, .Header {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 150%;
+    color: #282c34;
+  }
+
+    .Title img {
+      width: 100px;
+      height: 100px;
+      margin-top: 3rem;
+    }
+
+  .Header {
+    background-color: white;
+    text-align: left;
+    padding: 1rem;
+    font-size: 100%;
+  }
+
+    .Header h2 {
+      display: inline;
+      font-weight: normal;
+    }
+
+  .Header img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .backgroundImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .LogInForm {
+    background-color: white;
+    opacity: 88%;
+    margin-top: 5rem;
+    padding: 2rem;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(2px 2px 2px black);
+  }
+
+    .LogInForm h2 {
+      margin: 0 0 1rem 0;
+      padding: 0;
+    }
+
+    .inputContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      margin: auto;
+    }
+
+    .LogInForm input{
+      width: 10rem;
+    }
+
+    .LogInForm label {
+      font-size: 90%;
+      font-weight: bold;
+    }
+
+    .LogInForm button {
+      background-color: black;
+      color: white;
+      padding: 1rem 3rem 1rem 3rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
