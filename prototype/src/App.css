@@ -1,3 +1,75 @@
+/* Colours */
+:root {
+  --red: #cb8c8c;
+  --orange: #cba08c;
+  --yellow: #d8c196;
+  --cyan: #b1d4da;
+  --blue: #a1bdcd;
+  --grey: #7f8e97;
+}
+
+/* * * * */
+
+/* BG Colours */
+
+.bg--red {
+  background-color: var(--red);
+}
+.bg--orange {
+  background-color: var(--orange);
+}
+.bg--yellow {
+  background-color: var(--yellow);
+}
+.bg--cyan {
+  background-color: var(--cyan);
+}
+.bg--blue {
+  background-color: var(--blue);
+}
+.bg--grey {
+  background-color: var(--grey);
+}
+
+.card--custom {
+  height: 7rem;
+}
+
+/* .challengeMain {
+  width: 100vw;
+  height: 90vh; */
+/* background-color: rgba(240, 211, 211, 0.488); */
+/* display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+.challengeMain--Subject {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 30%;
+  height: 80px;
+  background-color: red;
+  margin: 5px;
+}
+
+.overviewContainer {
+  background-color: #d3d6d7;
+  height: 94vh;
+  padding-top: 5vh;
+}
+
+.challengeContainer {
+  background-color: #d3d7d3;
+  height: 94vh;
+  padding-top: 5vh;
+}
+
+body {
+  background-color: #d3d7d3;
+}
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 
 .App {
