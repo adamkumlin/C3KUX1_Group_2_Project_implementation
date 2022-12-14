@@ -76,10 +76,11 @@ body {
   text-align: center;
 }
 
-  .Title, .Header {
+  .Title, .NavBar {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 150%;
     color: #282c34;
+    text-align: center;
   }
 
     .Title img {
@@ -88,19 +89,18 @@ body {
       margin-top: 3rem;
     }
 
-  .Header {
-    background-color: white;
+  .NavBar {
     text-align: left;
     padding: 1rem;
     font-size: 100%;
   }
 
-    .Header h2 {
+    .NavBar h2 {
       display: inline;
       font-weight: normal;
     }
 
-  .Header img {
+    .NavBar img {
     height: 50px;
     width: 50px;
   }
@@ -123,6 +123,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     filter: drop-shadow(2px 2px 2px black);
+    text-align: center;
   }
 
     .LogInForm h2 {
