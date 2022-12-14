@@ -5,7 +5,7 @@ function Title() {
     return (
       <div className="Title">
           <img src={earthIcon}/>
-          <h1>KLIMATUTMANINGEN</h1>
+          <h2>KLIMATUTMANINGEN</h2>
       </div>
     );
   }
