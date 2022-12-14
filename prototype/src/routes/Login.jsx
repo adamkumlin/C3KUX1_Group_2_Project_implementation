@@ -29,5 +29,7 @@ function LogIn() {
   </div>
   );
 }
+// Placerar tre komponenter och en bild.
 
 export default LogIn;
+// Exporterar komponenten som "LogIn".
