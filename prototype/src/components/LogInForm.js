@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function LogInForm() {
 
     return (
@@ -11,7 +13,7 @@ function LogInForm() {
             <label>Lösenord</label>
             <input type="password" name="password"/>
           </div>
-          <button>Logga in</button>
+          <Link to="/overview"><button>Logga in</button></Link>
       </div>
     );
   }
