@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import earthIcon from "../images/earth-icon.svg";
 import { Link } from "react-router-dom";
 
 function OffcanvasExample({ isSignedIn }) {
@@ -14,15 +15,10 @@ function OffcanvasExample({ isSignedIn }) {
       <Navbar bg="light" expand={expand} className="m-0">
         <Container fluid>
           {isSignedIn ? (
-            <Navbar.Brand href="/overview">
-              {/* <img
-                src="../images/earth_318-915647.png"
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-                alt="React Bootstrap logo"
-              /> */}
-              Klimatutmaningen
+            
+            <Navbar.Brand className="NavBar" href="/overview">
+              <img src={earthIcon}/>
+              KLIMATUTMANINGEN
             </Navbar.Brand>
           ) : (
             <Navbar.Brand href="/">Klimatutmaningen</Navbar.Brand>

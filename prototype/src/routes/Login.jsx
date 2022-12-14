@@ -1,5 +1,9 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
+import LogInForm from "../components/LogInForm.js"
+import Title from "../components/Title.js";
+import Header from "../components/Header.js";
+import backgroundImage from "../images/background-login.jpg";
 
 const Login = ({ setIsSignedIn }) => {
   //Set if the user is signed in or not
@@ -10,16 +14,22 @@ const Login = ({ setIsSignedIn }) => {
   const signout = () => {
     setIsSignedIn(false);
   };
+}
+
+function LogIn() {
 
   return (
-    <div>
-      <h1>login</h1>
-      {/* Link us used instead of button, can be styled to look like button */}
-      <Link as="button" to="/overview" onClick={signin}>
-        Sign In
-      </Link>
-    </div>
-  );
-};
+    <div className="LogIn">
 
-export default Login;
+      <img className="backgroundImage"src={backgroundImage}/>
+      
+      <Title/>
+
+      <LogInForm/>
+  </div>
+  );
+}
+// Placerar tre komponenter och en bild.
+
+export default LogIn;
+// Exporterar komponenten som "LogIn".

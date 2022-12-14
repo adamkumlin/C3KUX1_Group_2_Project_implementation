@@ -191,10 +191,13 @@ main {
 body {
   background-color: #d3d7d3;
 }
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+/* Importerar ett typsnitt. */
 
 .App {
   text-align: center;
 }
+/* Centrerar innehållet. */
 
 .Title,
 .Header {
@@ -295,3 +298,97 @@ body {
 }
 
 /*            */
+  .Title, .NavBar {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 150%;
+    color: #282c34;
+    text-align: center;
+  }
+  /* Ändrar typsnittet, teckenstorleken, färgen och centrerar innehållet. */
+
+    .Title img {
+      width: 100px;
+      height: 100px;
+      margin-top: 3rem;
+    }
+    /* Bestämmer höjd och bredd samt ger den en margin längst upp. */
+
+    .NavBar {
+      text-align: left;
+      padding: 1rem;
+      font-size: 100%;
+    }
+    /* Placerar texten till vänster, gör texten större och ger komponenten en padding. */
+
+      .NavBar h2 {
+        display: inline;
+        font-weight: normal;
+      }
+      /* Ger den en inline-display och gör texten en normal tjocklek. */
+
+      .NavBar img {
+      height: 50px;
+      width: 50px;
+    }
+    /* Bestämmer höjd och bredd. */
+
+  .backgroundImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  /* Bestämmer höjd och bredd, ändrar till en absolut positionering, bestämmer var top och left samt ger den ett negativt z-index så den är bakom alla andra komponenter. */
+
+  .LogInForm {
+    background-color: white;
+    opacity: 88%;
+    margin-top: 5rem;
+    padding: 2rem;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(2px 2px 2px black);
+    text-align: center;
+  }
+  /* Bestämmer bakgrundsfärg och opacitet, ger den en margin längst upp samt en padding. Centrerar elementen med "margin-left: auto;" och "margin-right: auto;" samt
+  "text-align: center;". Ger den en skugga. */
+
+    .LogInForm h2 {
+      margin: 0 0 1rem 0;
+      padding: 0;
+    }
+    /* Tar bort margin, lägger till en margin längst ned. */
+
+    .inputContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      margin: auto;
+    }
+    /* Ändrar display till flex, grupperar flex-objekten i kolumner, sätter "align-items: flex-start;" så de positioneras till vänster, bredden blir så stor som innehållet i containern
+    är. Ger den en automatisk margin så den blir centrerad. */
+
+      .LogInForm input{
+        width: 10rem;
+      }
+      /* Sätter en bredd. */
+
+      .LogInForm label {
+        font-size: 90%;
+        font-weight: bold;
+      }
+      /* Ändrar teckenstorleken och gör texten fet. */
+
+    .LogInForm button {
+      background-color: black;
+      color: white;
+      padding: 1rem 3rem 1rem 3rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    /* Ändrar bakgrundsfärgen, färgen och ger den en padding. Ger den också en border radius så den blir mer rund och en margin längst upp. Slutligen ändras muspekarens utseende. */
