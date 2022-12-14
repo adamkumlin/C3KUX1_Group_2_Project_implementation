@@ -11,7 +11,7 @@ function OffcanvasExample({ isSignedIn }) {
   const expand = false;
   return (
     <>
-      <Navbar bg="light" expand={expand} className="mb-0">
+      <Navbar bg="light" expand={expand} className="m-0">
         <Container fluid>
           {isSignedIn ? (
             <Navbar.Brand href="/overview">

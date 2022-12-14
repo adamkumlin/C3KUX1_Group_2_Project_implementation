@@ -3,7 +3,9 @@ import React from "react";
 const Forum = () => {
   return (
     <>
-      <h1>Forum</h1>
+      <main>
+        <h1>Forum</h1>
+      </main>
     </>
   );
 };
