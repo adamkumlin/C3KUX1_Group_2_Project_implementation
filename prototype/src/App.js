@@ -17,7 +17,7 @@ import ProtectedRoutes from "./routes/ProtectedRoutes";
 import Overview from "./routes/Overview";
 import Challenge from "./routes/Challenge/Challenge";
 import Forum from "./routes/Forum/Forum";
-import Links from "./routes/Links/Links";
+import MinskaKlimatpaverkan from "./routes/Minska_klimatpaverkan/MinskaKlimatpaverkan";
 //Challenge sidor
 import IntroVideo from "./routes/Challenge/IntroVideo";
 import FossilaBranslen from "./routes/Challenge/FossilaBranslen";
@@ -26,6 +26,7 @@ import Glaciarer from "./routes/Challenge/Glaciarer";
 import Havsnivaer from "./routes/Challenge/Havsnivaer";
 import Sammanfattning from "./routes/Challenge/Sammanfattning";
 import Spel from "./routes/Challenge/Spel";
+import ChallengeOverview from "./routes/Challenge/ChallengeOverview";
 
 import "./App.css";
 
@@ -45,17 +46,25 @@ function App() {
         <Routes>
           <Route path="/" element={<Login setIsSignedIn={setIsSignedIn} />} />
           <Route element={<ProtectedRoutes isSignedIn={isSignedIn} />}>
-            <Route path="/overview" element={<Overview />}></Route>
-            <Route path="/challenge" element={<Challenge />} />
-            <Route path="1" element={<IntroVideo />} />
-            <Route path="2" element={<FossilaBranslen />} />
-            <Route path="3" element={<GlobalaTemperaturer />} />
-            <Route path="4" element={<Glaciarer />} />
-            <Route path="5" element={<Havsnivaer />} />
-            <Route path="6" element={<Sammanfattning />} />
-            <Route path="7" element={<Spel />} />
+            <Route path="/overview" element={<Overview />} />
+            <Route path="/" element={<Challenge />}>
+              <Route path="challenge" element={<ChallengeOverview />} />
+              <Route path="/video" element={<IntroVideo />} />
+              <Route path="/fossilabranslen" element={<FossilaBranslen />} />
+              <Route
+                path="/globalatemperaturer"
+                element={<GlobalaTemperaturer />}
+              />
+              <Route path="/glaciarer" element={<Glaciarer />} />
+              <Route path="/havsnivaer" element={<Havsnivaer />} />
+              <Route path="/tips" element={<Sammanfattning />} />
+              <Route path="/spel" element={<Spel />} />
+            </Route>
             <Route path="/forum" element={<Forum />} />
-            <Route path="/links" element={<Links />} />
+            <Route
+              path="/minskaklimatpaverkan"
+              element={<MinskaKlimatpaverkan />}
+            />
           </Route>
         </Routes>
       </Router>
