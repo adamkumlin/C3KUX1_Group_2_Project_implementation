@@ -14,7 +14,16 @@ function OffcanvasExample({ isSignedIn }) {
       <Navbar bg="light" expand={expand} className="mb-0">
         <Container fluid>
           {isSignedIn ? (
-            <Navbar.Brand href="/overview">Klimatutmaningen</Navbar.Brand>
+            <Navbar.Brand href="/overview">
+              {/* <img
+                src="../images/earth_318-915647.png"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+              /> */}
+              Klimatutmaningen
+            </Navbar.Brand>
           ) : (
             <Navbar.Brand href="/">Klimatutmaningen</Navbar.Brand>
           )}

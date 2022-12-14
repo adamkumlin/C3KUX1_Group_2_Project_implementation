@@ -46,13 +46,13 @@ const Challenge = () => {
       complete: false,
     },
     {
-      name: "Spel",
+      name: "Tips på mer info",
       path: "6",
       color: "#7f8e97",
       complete: false,
     },
     {
-      name: "Sammanfattning",
+      name: "Spel",
       path: "7",
       color: "#7f8e97",
       complete: false,
