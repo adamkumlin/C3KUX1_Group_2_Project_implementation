@@ -7,22 +7,22 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import earthIcon from "../images/earth-icon.svg";
 import { Link } from "react-router-dom";
+import Padlock from "../images/padlock.png";
 
-function OffcanvasExample({ isSignedIn }) {
+function OffcanvasExample({ isSignedIn, subjects }) {
+  console.log(subjects);
+
   const expand = false;
   return (
     <>
-      <Navbar bg="light" expand={expand} className="m-0">
-        <Container fluid>
-          {isSignedIn ? (
-            
-            <Navbar.Brand className="NavBar" href="/overview">
-              <img src={earthIcon}/>
-              KLIMATUTMANINGEN
-            </Navbar.Brand>
-          ) : (
-            <Navbar.Brand href="/">Klimatutmaningen</Navbar.Brand>
-          )}
+      <Navbar expand={expand} className="navBar m-0">
+        <Container className="navBar-container" fluid>
+          <Navbar.Brand className="navBar" href="/overview">
+            <div className="navBarLogo">
+              <img src={earthIcon} />
+            </div>
+            KLIMATUTMANINGEN
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}
@@ -31,26 +31,87 @@ function OffcanvasExample({ isSignedIn }) {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                Offcanvas
+                Klimatutamningen
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
+                <Nav.Link href="#action1">
+                  <b>Logga ut</b>
+                </Nav.Link>
+                <Nav.Link href="#action2">Hem</Nav.Link>
+                <Nav.Link href="#action2">Minska klimatpåverkan</Nav.Link>
+
                 <NavDropdown
-                  title="Dropdown"
+                  title="Utmaningen"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
                 >
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/subjects/video">
+                    Klimatet (video)
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/subjects/fossilabranslen/1">
+                    <div className="dropdownContents">
+                      <p className={subjects[1].open ? "unlocked" : "locked"}>
+                        Fossila bränslen
+                      </p>
+                      {subjects[1]?.open ? undefined : (
+                        <img className="padlock" src={Padlock} alt="" />
+                      )}
+                    </div>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    className="locked-text"
+                    as={Link}
+                    to="/subjects/glaciarer/1"
+                  >
+                    <div className="dropdownContents">
+                      <p className={subjects[2].open ? "unlocked" : "locked"}>
+                        Glaciärer
+                      </p>
+                      {subjects[2]?.open ? undefined : (
+                        <img className="padlock" src={Padlock} alt="" />
+                      )}
+                    </div>
+                  </NavDropdown.Item>
                   <NavDropdown.Item href="#action4">
-                    Another action
+                    <div className="dropdownContents">
+                      <p className={subjects[3].open ? "unlocked" : "locked"}>
+                        Globala temperaturer
+                      </p>
+                      {subjects[3]?.open ? undefined : (
+                        <img className="padlock" src={Padlock} alt="" />
+                      )}
+                    </div>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action4">
+                    <div className="dropdownContents">
+                      <p className={subjects[4].open ? "unlocked" : "locked"}>
+                        Havsnivåer
+                      </p>
+                      <img className="padlock" src={Padlock} alt="" />
+                    </div>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action4">
+                    <div className="dropdownContents">
+                      <p className={subjects[5].open ? "unlocked" : "locked"}>
+                        {" "}
+                        Tips på mer info
+                      </p>
+                      <img className="padlock" src={Padlock} alt="" />
+                    </div>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action4">
+                    <div className="dropdownContents">
+                      <p className={subjects[6].open ? "unlocked" : "locked"}>
+                        {" "}
+                        Spel
+                      </p>
+                      <img className="padlock" src={Padlock} alt="" />
+                    </div>
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="#action2">Webboard / Forum</Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

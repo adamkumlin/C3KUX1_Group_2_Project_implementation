@@ -1,0 +1,66 @@
+[
+  {
+    "1": {
+      "name": "Fossila bränslen",
+      "image": "https://images.unsplash.com/photo-1564608938148-e3c5325907ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+      "ingress": "Fossila bränslen är den största källan till utsläpp av växthusgaser som bidrar till klimatförändring. Exempel på fossila bränslen är kol, bensin, diesel och naturgas.",
+      "content": "Naturvårdsverket ansvarar för viktiga delar i arbetet med att minska användningen av fossila bränslen. Bland annat arbetar vi med att utveckla åtgärdsstrategier och styrmedel för att minska användningen av fossila bränslen för transporter och uppvärmning. Minskningen kan ske bland annat genom energieffektivare bilar och övergång till förnybar energi, som biobränslen eller el från sol och vind."
+    },
+    "2": {
+      "name": "Quiz",
+      "question": "Hur mcyket bränsle?",
+      "options": {
+        "a": "100",
+        "b": "200",
+        "c": "300"
+      },
+      "answer": "a"
+    },
+    "3": {
+      "name": "Bränsleanvändning",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic totam, suscipit ipsa excepturi dolore in repellat debitis quasi. Tempore, expedita ipsa. Soluta alias at dolore! Omnis maiores asperiores quisquam et."
+    },
+    "4": {
+      "name": "Quiz",
+      "question": "Vad är bäst?",
+      "options": {
+        "a": "Kål",
+        "b": "Kärnkraft",
+        "c": "Vindkraft"
+      },
+      "answer": "b"
+    }
+  },
+  {
+    "1": {
+      "name": "Glaciärer",
+      "image": "https://images.unsplash.com/photo-1465917566611-efba2904dd8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2676&q=80",
+      "ingress": "Smältande glaciärer påverkar inte bara havsytans höjning, de kan också ge effekter på livsmedelsförsörjningen i form av minskad tillgång på färskvatten. Glaciärernas tillbakagång kan ge allvarliga konsekvenser.",
+      "content": "Många ekosystem hotas av undanträngning eller radikal omvandling om klimatet förändras. Det handlar om allvarliga konsekvenser för naturliga system som korallrev, glaciärer, nordliga skogar, tropiska skogar med flera. Arktis är till exempel extremt känsligt för klimatförändringar. Regionen utsätts redan för en snabb och allvarlig klimatförändring med stora konsekvenser för de djur och människor som lever i regionen."
+    },
+    "2": {
+      "name": "Quiz",
+      "question": "Hur mcyket bränsle?",
+      "options": {
+        "a": "100",
+        "b": "200",
+        "c": "300"
+      },
+      "answer": "a"
+    },
+    "3": {
+      "name": "Bränsleanvändning",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic totam, suscipit ipsa excepturi dolore in repellat debitis quasi. Tempore, expedita ipsa. Soluta alias at dolore! Omnis maiores asperiores quisquam et."
+    },
+    "4": {
+      "name": "Quiz",
+      "question": "Vad är bäst?",
+      "options": {
+        "a": "Kål",
+        "b": "Kärnkraft",
+        "c": "Vindkraft"
+      },
+      "answer": "b"
+    }
+  }
+]

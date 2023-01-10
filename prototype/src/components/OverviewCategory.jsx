@@ -1,9 +1,14 @@
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function BasicExample({ category }) {
   return (
-    <Container className="overviewButton" fluid>
+    <Container
+      as="button"
+      // variant="outline-secondary"
+      className="overviewButton"
+      fluid
+    >
       <Link
         to={category.path}
         style={{ color: "black", textDecoration: "none" }}
