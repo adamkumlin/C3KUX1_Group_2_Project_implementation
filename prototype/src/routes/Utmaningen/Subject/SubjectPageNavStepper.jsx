@@ -3,16 +3,22 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
+/* A stepper component, to aid the user in identifying at which stage they are currently at within a subjext */
 const SubjectsNav = ({ data }) => {
   let activeStyle = {
     backgroundColor: "green",
   };
-  const location = useLocation();
 
+  /* Location from react router, is used to get the current path. */
+  const location = useLocation();
+  /* Get current url */
   let currentPageURL = location.pathname;
+  /* Split current url using / */
   let split = currentPageURL.split("/");
+  /* Set current page number */
   const currentPageNumber = Number(split[3]);
 
+  /* If data is not available, render a div with text "loading..." */
   if (!data) {
     return <div>Loading...</div>;
   }

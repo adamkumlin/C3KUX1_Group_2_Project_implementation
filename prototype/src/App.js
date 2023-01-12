@@ -1,23 +1,12 @@
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-} from "recharts";
-
 import { useState, useEffect } from "react";
-
 import "./App.css";
-
 import {
   RouterProvider,
   Route,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //Root layout
 import RootLayout from "./components/RootLayout";
@@ -35,8 +24,11 @@ import ChallengeOverview from "./routes/Utmaningen/Subjects/ChallengeOverview";
 import SubjectPage from "./routes/Utmaningen/Subject/SubjectPage";
 
 function App() {
-  const [isSignedIn, setIsSignedIn] = useState(true);
+  //Set state for data from /data/data.json
   const [data, setData] = useState([]);
+  /* Set state for subjects options, used to handle navigation in NavBar and on subjects in ChallengeOverview. 
+  The complete and keys are used to conditionally render buttons / icons depending on wether the user is 
+  allowed to continue the challenge. */
   const [subjects, setSubjects] = useState([
     {
       id: 1,
@@ -96,22 +88,26 @@ function App() {
     },
   ]);
 
+  //Get data from /data/data.json and set state for data.
   useEffect(() => {
     const url = "/data/data.json";
     fetch(url)
       .then((res) => res.json())
       .then((loaded) => {
-        // console.log("FETCH", loaded);
         setData(loaded);
       });
   }, []);
 
+  /*
+  Structuring the router with different paths and elements. 
+  
+  The routes are nested which gives the user another way of identifying where they are in relation to the 
+  rest of the website. E.g. if a user visits the ChallengeOverview page (/utmaningen) and then clicks on 
+  for instance Start on the IntroVideo, they url will show them /subjects/video
+  */
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route
-        path="/"
-        element={<RootLayout isSignedIn={isSignedIn} subjects={subjects} />}
-      >
+      <Route path="/" element={<RootLayout subjects={subjects} />}>
         <Route index element={<Login />} />
         <Route path="overview" element={<Overview />}></Route>
         <Route path="/forum" element={<Forum />} />
@@ -162,7 +158,6 @@ function App() {
     )
   );
 
-  // if (!subjects) <div>Loading...</div>;
   return (
     <>
       <RouterProvider router={router} />

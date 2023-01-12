@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+/* Minska Klimatpåverkan page, for future use. */
 const MinskaKlimatpaverkan = () => {
   return (
     <Container className="challengeContainer" fluid>

@@ -19,8 +19,6 @@ body {
   --main: #d3d7d3;
 }
 
-/* * * * */
-
 /* BG Colours */
 
 .bg--red {
@@ -230,6 +228,7 @@ body {
   width: 50%;
   height: 50%;
   box-shadow: 4px 4px 10px black;
+  z-index: 1;
 }
 
 .hideWordDefinition {

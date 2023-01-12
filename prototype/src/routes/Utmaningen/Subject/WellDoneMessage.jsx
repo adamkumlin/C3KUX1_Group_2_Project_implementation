@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-import { AiOutlineClose } from "react-icons/ai";
 
-const WellDoneMessage = ({ alert, showAlert, handleComplete }) => {
+/* Component to display well done message when a suject is completed */
+const WellDoneMessage = ({ showWellDone, handleComplete }) => {
   return (
+    /*Conditional rendering, swithces classes onCLick and sets display: none / display: flex */
     <div
       className={
-        alert ? "subjectCompleteContainer" : "hideSubjectCompleteContainer"
+        showWellDone
+          ? "subjectCompleteContainer"
+          : "hideSubjectCompleteContainer"
       }
     >
       <div className="subjectCompletePage">

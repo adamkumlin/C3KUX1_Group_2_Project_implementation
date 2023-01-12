@@ -5,7 +5,7 @@ import Title from "../../components/Title.jsx";
 import { Container, Col, Row } from "react-bootstrap";
 
 function LogIn({ setIsSignedIn }) {
-  //Set if the user is signed in or not
+  /* Set user as signed in / out  (not currently in use, but would be used with private route in react router)*/
   const signin = () => {
     setIsSignedIn(true);
   };
@@ -14,6 +14,7 @@ function LogIn({ setIsSignedIn }) {
     setIsSignedIn(false);
   };
 
+  /* Layour and contents of the login page*/
   return (
     <main className="main challengeOverview">
       <Container className="overviewContainer">
@@ -24,7 +25,7 @@ function LogIn({ setIsSignedIn }) {
         </Row>
         <Row>
           <Col>
-            <LogInForm signin={signin} />
+            <LogInForm />
           </Col>
         </Row>
       </Container>

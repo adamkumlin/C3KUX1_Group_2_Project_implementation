@@ -1,6 +1,4 @@
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -9,9 +7,10 @@ import earthIcon from "../images/earth-icon.svg";
 import { Link } from "react-router-dom";
 import Padlock from "../images/padlock.png";
 
-function OffcanvasExample({ isSignedIn, subjects }) {
-  console.log(subjects);
-
+/* This component uses a default navbar from the react-bootrstap library 
+   subjects is a prop which is used to establish the paths which the links should navigate to.
+*/
+function NavBar({ subjects }) {
   const expand = false;
   return (
     <>
@@ -121,4 +120,4 @@ function OffcanvasExample({ isSignedIn, subjects }) {
   );
 }
 
-export default OffcanvasExample;
+export default NavBar;

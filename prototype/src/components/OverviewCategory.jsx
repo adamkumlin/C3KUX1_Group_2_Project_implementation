@@ -1,14 +1,10 @@
 import { Container, Col, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function BasicExample({ category }) {
+/* The button which is used on the overview page shown after logging in */
+function OverviewCategory({ category }) {
   return (
-    <Container
-      as="button"
-      // variant="outline-secondary"
-      className="overviewButton"
-      fluid
-    >
+    <Container as="button" className="overviewButton" fluid>
       <Link
         to={category.path}
         style={{ color: "black", textDecoration: "none" }}
@@ -28,4 +24,4 @@ function BasicExample({ category }) {
   );
 }
 
-export default BasicExample;
+export default OverviewCategory;

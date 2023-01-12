@@ -18,7 +18,8 @@
     },
     "3": {
       "name": "Bränsleanvändning",
-      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic totam, suscipit ipsa excepturi dolore in repellat debitis quasi. Tempore, expedita ipsa. Soluta alias at dolore! Omnis maiores asperiores quisquam et."
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic totam, suscipit ipsa excepturi dolore in repellat debitis quasi. Tempore, expedita ipsa. Soluta alias at dolore! Omnis maiores asperiores quisquam et.",
+      "dataset": "1"
     },
     "4": {
       "name": "Quiz",
@@ -49,8 +50,9 @@
       "answer": "a"
     },
     "3": {
-      "name": "Bränsleanvändning",
-      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic totam, suscipit ipsa excepturi dolore in repellat debitis quasi. Tempore, expedita ipsa. Soluta alias at dolore! Omnis maiores asperiores quisquam et."
+      "name": "Storlek",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic totam, suscipit ipsa excepturi dolore in repellat debitis quasi. Tempore, expedita ipsa. Soluta alias at dolore! Omnis maiores asperiores quisquam et.",
+      "dataset": "3"
     },
     "4": {
       "name": "Quiz",

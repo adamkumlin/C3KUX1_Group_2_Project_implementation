@@ -1,6 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
 
+/*
+Credit to: bravemaster619
+https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2 
+
+This components is used to embed a youtube video. 
+Source takes an embedId which is provided as a prop in IntroVideo
+
+*/
 const YoutubeEmbed = ({ embedId }) => (
   <div className="video-responsive">
     <iframe

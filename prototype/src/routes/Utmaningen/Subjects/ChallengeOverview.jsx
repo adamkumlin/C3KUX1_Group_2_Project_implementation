@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Subject from "../../../components/Subject";
 
-const ChallengeOverview = ({ subjects, setSubjects }) => {
+const ChallengeOverview = ({ subjects }) => {
   return (
     <Container className="challengeContainer" fluid>
       <Row>
@@ -19,12 +19,7 @@ const ChallengeOverview = ({ subjects, setSubjects }) => {
         <Col></Col>
         <Col xs={6}>
           {subjects.map((subject) => (
-            <Subject
-              key={subject.name}
-              subject={subject}
-              subjects={subjects}
-              setSubjects={setSubjects}
-            />
+            <Subject key={subject.name} subject={subject} />
           ))}
         </Col>
         <Col></Col>

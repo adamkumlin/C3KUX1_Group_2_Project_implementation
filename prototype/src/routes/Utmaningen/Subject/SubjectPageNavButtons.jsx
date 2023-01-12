@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 
+/*  Component to handle contextual navigation within a subject*/
 const SubjectPageNavButtons = ({
   handleNextPage,
   handlePreviousPage,

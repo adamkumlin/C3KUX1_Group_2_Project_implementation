@@ -2,10 +2,14 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar";
 
-const RootLayout = ({ isSignedIn, subjects }) => {
+/* Root Layout
+NavBar is a constant element which is alwas visible.
+All routes in App.js are rendered through this Outlet.
+*/
+const RootLayout = ({ subjects }) => {
   return (
     <>
-      <NavBar isSignedIn={isSignedIn} subjects={subjects} />
+      <NavBar subjects={subjects} />
       <Outlet />
     </>
   );

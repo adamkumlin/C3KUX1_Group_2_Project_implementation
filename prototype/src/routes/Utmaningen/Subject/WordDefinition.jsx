@@ -1,10 +1,13 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import { AiOutlineClose } from "react-icons/ai";
 
+/* Component which shows a worddefinition in the form of a modal, currently hard coded but should by
+   dynamic in the future, as to update definitions according to users current subject or page
+*/
 const WordDefinition = ({ handleWordDefinition, showDefinition }) => {
   return (
     <div
+      /*Conditional rendering, swithces classes onCLick and sets display: none / display: flex */
       className={
         showDefinition ? "wordDefinitionContainer" : "hideWordDefinition"
       }
@@ -19,15 +22,12 @@ const WordDefinition = ({ handleWordDefinition, showDefinition }) => {
         <h2>Ordförklaring</h2>
         <ul>
           <li>
-            Klimatet: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Dolor, ducimus?
-          </li>
-          <li>
-            Fossila bränslen: Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Dolor, ducimus?
+            <b>Fossila bränslen: </b>
+            Fossila bränslen är den största källan till utsläpp av växthusgaser
+            som bidrar till klimatförändring. Exempel på fossila bränslen är
+            kol, bensin, diesel och fossilgas. "
           </li>
         </ul>
-        {/* <Button onClick={handleWordDefinition}>Tillbaka</Button> */}
       </div>
     </div>
   );

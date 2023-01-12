@@ -3,7 +3,9 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import YoutubeEmbed from "../../../components/YoutubeEmbed";
 import { Link } from "react-router-dom";
 
+/* Layout page for the intro video subject */
 const IntroVideo = ({ subjects, setSubjects }) => {
+  /* Handle complete, updates state and sets complete value to true. */
   const handleComplete = () => {
     const id = subjects[0].id;
     const updateSubject = subjects.map((subject) => {

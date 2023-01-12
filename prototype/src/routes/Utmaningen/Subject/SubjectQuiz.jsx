@@ -1,5 +1,6 @@
 import React from "react";
 
+/* Component which renders quiz questions from content data, not fully implemented */
 const SubjectQuiz = ({ content }) => {
   return (
     <div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+
 // Importerar "Link" från "react-router-dom".
 
 function LogInForm({ signin }) {

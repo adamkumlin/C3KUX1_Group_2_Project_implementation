@@ -1,8 +1,5 @@
-/* SubjectContents.jsx : Displays contents for subjects routes */
-
 import React, { useState } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import WordDefinition from "./WordDefinition";
 import WellDoneMessage from "./WellDoneMessage";
@@ -11,18 +8,18 @@ import SubjectGraph from "./SubjectGraph";
 import SubjectPageNavButtons from "./SubjectPageNavButtons";
 import SubjectPageToolbar from "./SubjectPageToolbar";
 
+/* Displays contents for subjects routes */
 const SubjectContents = ({ id, data, subjects, setSubjects }) => {
   const [showDefinition, setShowDefinition] = useState(false);
-  const [alert, setAlert] = useState(false);
+  const [showWellDone, setShowWellDone] = useState(false);
 
-  //Gets the content data for current subject. ID is used to distinguish which part of the object to display.
+  /* Gets the content data for current subject. ID is used to distinguish which part of the object to display. */
   let content = data[id];
-  //Navigate from react router, is used to navigate to a different path.
+  /* Navigate from react router, is used to navigate to a different path. */
   const navigate = useNavigate();
-  //Location from react router, is used to get the current path.
+  /* Location from react router, is used to get the current path. */
   let location = useLocation();
-
-  //Handle complete, updates state and sets complete value to true.
+  /* Handle complete, updates state and sets complete value to true. */
   const handleComplete = () => {
     const id = subjects[1].id;
     const updateSubject = subjects.map((subject) => {
@@ -34,7 +31,7 @@ const SubjectContents = ({ id, data, subjects, setSubjects }) => {
         };
       }
 
-      //Gets the id of the next subject and adds key of open with value of true.
+      /* Gets the id of the next subject and adds key of open with value of true. */
       if (subject.id === id + 1) {
         return {
           ...subject,
@@ -48,26 +45,35 @@ const SubjectContents = ({ id, data, subjects, setSubjects }) => {
     console.log("SUBJECTS", subjects);
   };
 
+  /* Get current url */
   let currentPageURL = location.pathname;
+  /* Split current url using / */
   let split = currentPageURL.split("/");
+  /* Set current page number */
   const currentPageNumber = Number(split[3]);
+  /* Set next page number */
   const nextPage = currentPageNumber + 1;
+  /* Set previous page number */
   const previousPage = currentPageNumber - 1;
+  /* Join the split url again without the page number */
   const joined = split[0] + "/" + split[1] + "/" + split[2];
 
-  const showAlert = () => {
-    setAlert(!alert);
+  /* Set state (showWellDone) to opposite of current value */
+  const showWellDoneMessage = () => {
+    setShowWellDone(!showWellDone);
   };
 
+  /* Function to handle navigating to next page, or to show well done message */
   const handleNextPage = () => {
     if (nextPage <= 4) {
       navigate(`${joined + "/" + nextPage}`);
     } else if (nextPage === 5) {
-      showAlert();
+      showWellDoneMessage();
     } else {
     }
   };
 
+  /* Function to handle navigating to previous page, or to navigate back to /utmaningen */
   const handlePreviousPage = () => {
     if (previousPage < 5 && previousPage > 0) {
       navigate(`${joined + "/" + previousPage}`);
@@ -76,6 +82,7 @@ const SubjectContents = ({ id, data, subjects, setSubjects }) => {
     }
   };
 
+  /* Set state (showDefinition) to opposite of current value */
   const handleWordDefinition = () => {
     setShowDefinition(!showDefinition);
   };
@@ -83,24 +90,26 @@ const SubjectContents = ({ id, data, subjects, setSubjects }) => {
   //Return the main contents
   return (
     <>
+      {/* WellDoneMessage is conditionally rendered in component using css classes */}
       <WellDoneMessage
-        alert={alert}
-        showAlert={showAlert}
+        showWellDone={showWellDone}
         handleComplete={handleComplete}
       />
       <SubjectPageToolbar />
       <article className="subjectPageContent">
+        {/* WordDefinition is conditionally rendered in component using css classes */}
         <WordDefinition
           handleWordDefinition={handleWordDefinition}
           showDefinition={showDefinition}
         />
         <h1>{content.name}</h1>
+        {/* Conditional rendering to show contents based on if a certain property is available */}
         {content.image ? (
           <img className="subjectImage" src={content.image} alt="image" />
         ) : content.question ? (
           <SubjectQuiz content={content} />
         ) : (
-          <SubjectGraph />
+          <SubjectGraph dataset={content.dataset} />
         )}
 
         <p className="lead-paragraph">{content.ingress}</p>
@@ -113,42 +122,6 @@ const SubjectContents = ({ id, data, subjects, setSubjects }) => {
         handleWordDefinition={handleWordDefinition}
       />
     </>
-    // <>
-    //   {alert ? (
-    //     <WellDoneMessage
-    //       alert={alert}
-    //       showAlert={showAlert}
-    //       handleComplete={handleComplete}
-    //     />
-    //   ) : (
-    //     <>
-    //       <SubjectPageToolbar />
-    //       <article className="subjectPageContent">
-    //         <WordDefinition
-    //           handleWordDefinition={handleWordDefinition}
-    //           showDefinition={showDefinition}
-    //         />
-    //         <h1>{content.name}</h1>
-    //         {content.image ? (
-    //           <img className="subjectImage" src={content.image} alt="image" />
-    //         ) : content.question ? (
-    //           <SubjectQuiz content={content} />
-    //         ) : (
-    //           <SubjectGraph />
-    //         )}
-
-    //         <p className="lead-paragraph">{content.ingress}</p>
-    //         <p className="content">{content.content}</p>
-    //       </article>
-
-    //       <SubjectPageNavButtons
-    //         handleNextPage={handleNextPage}
-    //         handlePreviousPage={handlePreviousPage}
-    //         handleWordDefinition={handleWordDefinition}
-    //       />
-    //     </>
-    //   )}
-    // </>
   );
 };
 
